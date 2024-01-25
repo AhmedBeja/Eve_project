@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EnergiesService {
-  private url: string = 'http://localhost:8000/api';
+  private url: string = 'http://localhost:8000/api/energies';
 
   constructor(private http: HttpClient) { }
 
