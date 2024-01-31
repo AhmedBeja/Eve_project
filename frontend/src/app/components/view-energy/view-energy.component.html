@@ -7,26 +7,12 @@
     <title>View Users</title>
 </head>
 <body>
-    <!--Navbar consists only Home and Add User-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <!--Table to display all the users-->
+
         <!--container-->
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center">View Energies</h1>
+                    <h1 class="text-center">Energies</h1>
                     <!--Add button -->
                     <table class="table table-striped">
                         <thead>
@@ -49,7 +35,56 @@
                 </div>
             </div>
         </div>
-      
+        <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <h1 class="text-center">Energies_type</h1>
+                  <!--Add button -->
+                  <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Id</th>
+                          <th scope="col">type</th>
+                          <th scope="col">pourcentage</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let energy of energies_type">
+                          <th scope="row">{{energy.id}}</th>
+                          <td>{{energy.type}}</td>
+                          <td>{{energy.pourcentage}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Energies_mean</h1>
+                <!--Add button -->
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">type</th>
+                        <th scope="col">famille</th>
+                        <th scope="col">pourcentage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let energy of energies_mean">
+                        <th scope="row">{{energy.id}}</th>
+                        <td>{{energy.type}}</td>
+                        <td>{{energy.family}}</td>
+                        <td>{{energy.pourcentage}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
