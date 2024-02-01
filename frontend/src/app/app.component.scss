@@ -1,0 +1,42 @@
+.logo {
+    img{
+        max-width: 70px;
+        margin: 10px;
+    }
+}
+
+.spacer {
+    flex: 50 1 auto;
+    border: 3px solid black;
+}
+
+h1 {
+    color: #333; 
+    font-weight: bold;
+}
+
+.nav-bar {
+  color: #514e4e; // Couleur du texte des liens
+  font-weight: bold; // Police en gras
+  margin-right: 15px; // Marge à droite entre les liens
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid black;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  border: 3px solid blue;
+  .nav-text {
+    color: #514e4e; // Couleur du texte des liens
+    font-weight: bold; // Police en gras
+    font-style: none;
+    margin-right: 15px; 
+  }
+}
+
