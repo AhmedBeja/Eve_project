@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ViewEnergyComponent} from './components/view-energy/view-energy.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgApexchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

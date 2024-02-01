@@ -8,83 +8,8 @@
 </head>
 <body>
 
-        <!--container-->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="text-center">Energies</h1>
-                    <!--Add button -->
-                    <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">description</th>
-                            <th scope="col">lcoe</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr *ngFor="let energy of energies">
-                            <th scope="row">{{energy.id}}</th>
-                            <td>{{energy.name}}</td>
-                            <td>{{energy.description}}</td>
-                            <td>{{energy.lcoe}}</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-          <div class="row">
-              <div class="col-md-12">
-                  <h1 class="text-center">Energies_type</h1>
-                  <!--Add button -->
-                  <table class="table table-striped">
-                      <thead>
-                        <tr>
-                          <th scope="col">Id</th>
-                          <th scope="col">type</th>
-                          <th scope="col">pourcentage</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr *ngFor="let energy of energies_type">
-                          <th scope="row">{{energy.id}}</th>
-                          <td>{{energy.type}}</td>
-                          <td>{{energy.pourcentage}}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-              </div>
-          </div>
-      </div>
-      <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center">Energies_mean</h1>
-                <!--Add button -->
-                <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">type</th>
-                        <th scope="col">famille</th>
-                        <th scope="col">pourcentage</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let energy of energies_mean">
-                        <th scope="row">{{energy.id}}</th>
-                        <td>{{energy.type}}</td>
-                        <td>{{energy.family}}</td>
-                        <td>{{energy.pourcentage}}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-            </div>
-        </div>
-    </div>
-
+  <div class="chartContainer">
+    <apx-chart [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels" [title]="chartTitle" [dataLabels]="chartDataLabels"></apx-chart>
+</div>
 </body>
 </html>
