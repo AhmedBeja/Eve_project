@@ -47,5 +47,8 @@ export class ViewEnergyComponent implements OnInit {
       this.chartLabels = this.energies_type.map((energy: any) => energy.type);
   });
 }
+onChartLoad(chart: any): void {
+  console.log('Chart loaded:', chart.target.parentElement.getAttribute("data:realIndex"));
+}
 
 }

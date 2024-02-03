@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="chartContainer">
-    <apx-chart [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels" [title]="chartTitle" [dataLabels]="chartDataLabels"  ></apx-chart>
+    <apx-chart [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels" [title]="chartTitle" [dataLabels]="chartDataLabels" (click)="onChartLoad($event)" ></apx-chart>
 </div>
 </body>
 </html>
