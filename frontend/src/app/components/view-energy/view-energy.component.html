@@ -8,7 +8,12 @@
 </head>
 <body>
   <div class="chartContainer">
-    <apx-chart [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels" [title]="chartTitle" [dataLabels]="chartDataLabels" (click)="onChartLoad($event)" ></apx-chart>
-</div>
+    <!-- Premier pie chart -->
+    <apx-chart [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels" [title]="chartTitle" [dataLabels]="chartDataLabels" (click)="onChartLoad($event)"></apx-chart>
+  
+    <!-- Deuxième pie chart (basé sur Energies_mean) -->
+    <apx-chart *ngIf="chartSeries.length > 0" [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels" [title]="chartTitle" [dataLabels]="chartDataLabels" hidden></apx-chart>
+  </div>
+  
 </body>
 </html>
