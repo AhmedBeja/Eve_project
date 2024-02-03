@@ -41,7 +41,7 @@ export class ViewEnergyComponent implements OnInit {
       this.energies_type = data;
 
       // Map the data for the chart series
-      this.chartSeries = this.energies_type.map((energy: any) => energy.pourcentage);
+      this.chartSeries = this.energies_type.map((energy: any) => energy.Energie_totale);
       
       // Map the labels
       this.chartLabels = this.energies_type.map((energy: any) => energy.type);

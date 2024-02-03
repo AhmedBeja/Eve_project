@@ -9,6 +9,7 @@ export interface Energy_type {
     id: string;
     type: string;
     pourcentage: number;
+    Energie_totale: number;
 }
 
 export interface Energy_mean {
