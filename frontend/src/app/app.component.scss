@@ -7,7 +7,7 @@
 
 .spacer {
     flex: 50 1 auto;
-    border: 3px solid black;
+    //border: 3px solid black;
 }
 
 h1 {
@@ -25,17 +25,19 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 3px solid black;
+  background-color: rgb(193, 239, 223);
+  height: 100px;
+  //border: 3px solid black;
 }
 
 .navbar-nav {
   display: flex;
   align-items: center;
-  border: 3px solid blue;
+  //border: 3px solid blue;
   .nav-text {
-    color: #514e4e; // Couleur du texte des liens
-    font-weight: bold; // Police en gras
-    font-style: none;
+    color: #342f2f;
+    //font-family: 'Courier New', Courier, monospace; //à changer
+    text-decoration: none;
     margin-right: 15px; 
   }
 }
