@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Energy,Energy_mean,Energy_type } from './Energies';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable,map } from 'rxjs';
 
 
 @Injectable({
@@ -39,7 +39,13 @@ export class Energies_meanService {
 
   constructor(private http: HttpClient) { }
 
-  getEnergies_mean(): Observable<Energy_mean[]> {
-    return this.http.get<Energy_mean[]>(this.url);
+  // Ajoutez un paramètre pour spécifier le type à filtrer
+  getEnergies_meanByType(type: string): Observable<Energy_mean[]> {
+    // Appel à l'API pour récupérer toutes les données
+    return this.http.get<Energy_mean[]>(this.url)
+      .pipe(
+        // Utilisation de l'opérateur map pour filtrer les données en fonction du type
+        map((energies_mean: Energy_mean[]) => energies_mean.filter(energy => energy.family === type))
+      );
   }
 }

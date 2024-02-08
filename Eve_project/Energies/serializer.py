@@ -15,4 +15,4 @@ class Energie_meanSerializer(serializers.ModelSerializer):
 class Energie_typeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Energy_type
-        fields = ('id', 'type', 'pourcentage')
+        fields = ('id', 'type', 'pourcentage','Energie_totale')

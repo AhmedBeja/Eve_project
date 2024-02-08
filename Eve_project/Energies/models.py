@@ -14,6 +14,7 @@ class Energy_type(models.Model):
     id = models.CharField(max_length=255,primary_key=True)
     type = models.CharField(max_length=255)
     pourcentage=models.IntegerField()
+    Energie_totale=models.IntegerField()
 
     def __str__(self):
         return self.id
