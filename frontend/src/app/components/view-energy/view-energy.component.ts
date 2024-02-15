@@ -35,37 +35,55 @@ export class ViewEnergyComponent implements OnInit {
   chartDataLabels: ApexDataLabels = {
     enabled: true
   };
-  initialChartTitle: string = 'Energies';
+
+  chartsData: any[] = [];
   ngOnInit(): void {
     this.Energies_typeService.getEnergies_type().subscribe(data => {
       this.energies_type = data;
-      // Map the data for the chart series
       this.chartSeries = this.energies_type.map((energy: any) => energy.Energie_totale);
-      
-      // Map the labels
       this.chartLabels = this.energies_type.map((energy: any) => energy.type);
-  });
+
+      this.chartsData.push({
+        series: this.chartSeries,
+        labels: this.chartLabels,
+        title: 'Energies'
+      });
+    });
 }
 onChartLoad(chart: any): void {
   const clickedPart = chart.target.parentElement.getAttribute("data:realIndex");
-  const clickedEnergyDetails = this.energies_type[clickedPart];
-  this.Energies_meanService.getEnergies_meanByType(clickedEnergyDetails.type).subscribe(filteredData => {
-    for (let i = 0; i < filteredData.length; i++) {
-      const element = filteredData[i];
-      this.loadEnergiesMean(element.family);
-    }
+  const clickedElementDetails = this.energies_type[clickedPart];
+  console.log(clickedElementDetails)
+
+  if(clickedElementDetails.group == 'Type'){
+    this.Energies_meanService.getEnergies_meanByType(clickedElementDetails.type).subscribe(filteredData => {
+    this.loadEnergiesMean(clickedElementDetails.type);
   });
+} if(clickedElementDetails.group == 'Moyen'){
+  console.log('Fonctionne')
+}
 }
 
 loadEnergiesMean(clickedEnergyType: any): void {
-  this.initialChartTitle = 'Moyen de production';
+  
+  const newChartData = {
+    series: [],
+    labels: [],
+    title: 'Moyen de production'
+  };
   this.Energies_meanService.getEnergies_meanByType(clickedEnergyType).subscribe(newChartData => {
-
+    //console.log(clickedEnergyType)
     // Met à jour les propriétés du composant avec les nouvelles données
     this.chartSeries = newChartData.map((energy: any) => energy.pourcentage);
     this.chartLabels = newChartData.map((energy: any) => energy.type);
-    this.chartTitle.text = this.initialChartTitle;
+    this.chartsData.push({
+      series: this.chartSeries,
+      labels: this.chartLabels,
+      title: 'Moyen de production'
+    });
+
   });
 }
+
 
 }

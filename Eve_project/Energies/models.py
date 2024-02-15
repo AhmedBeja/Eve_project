@@ -6,6 +6,7 @@ class Energie(models.Model):
     name= models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     lcoe = models.CharField(max_length=255)
+    group=models.CharField(max_length=255)
 
     def __str__(self):
         return self.name
@@ -15,6 +16,7 @@ class Energy_type(models.Model):
     type = models.CharField(max_length=255)
     pourcentage=models.IntegerField()
     Energie_totale=models.IntegerField()
+    group=models.CharField(max_length=255)
 
     def __str__(self):
         return self.id
@@ -24,6 +26,7 @@ class Energy_mean(models.Model):
     family= models.ForeignKey(Energy_type, on_delete=models.CASCADE)
     type = models.CharField(max_length=255)
     pourcentage=models.IntegerField()
+    group=models.CharField(max_length=255)
 
     def __str__(self):
         return self.id

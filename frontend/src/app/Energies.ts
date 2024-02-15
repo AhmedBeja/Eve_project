@@ -3,6 +3,7 @@ export interface Energy {
     name: string;
     description: string;
     lcoe: string;
+    group: string;
 }
 
 export interface Energy_type {
@@ -10,6 +11,7 @@ export interface Energy_type {
     type: string;
     pourcentage: number;
     Energie_totale: number;
+    group: string;
 }
 
 export interface Energy_mean {
@@ -17,4 +19,5 @@ export interface Energy_mean {
     type: string;
     family: string;
     pourcentage: number;
+    group: string;
 }
