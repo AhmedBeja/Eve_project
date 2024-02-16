@@ -38,12 +38,16 @@ h1 {
 .navbar-nav {
   display: flex;
   align-items: center;
+  flex-direction: row;
   //border: 3px solid blue;
   .nav-text {
     color: #342f2f;
-    //font-family: 'Courier New', Courier, monospace; //à changer
     text-decoration: none;
     margin-right: 15px; 
+    position: relative;
   }
+  .nav-text:hover {
+    text-decoration: underline;
+}
 }
 
