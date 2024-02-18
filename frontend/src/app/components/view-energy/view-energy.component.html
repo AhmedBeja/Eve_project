@@ -7,12 +7,14 @@
     <title>View Users</title>
 </head>
 <body>
-  <div class="chartContainer">
-    <!-- Premier pie chart -->
-    <apx-chart  [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels" [title]="chartTitle" [dataLabels]="chartDataLabels" (click)="onChartLoad($event)"></apx-chart>
-  
-    <!-- Deuxième pie chart (basé sur Energies_mean) -->
-    <apx-chart *ngIf="chartSeries.length > 0" [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels" [title]="chartTitle" [dataLabels]="chartDataLabels" hidden></apx-chart>
+  <div class="chartContainer" >
+    
+  <div *ngIf="chartsData.length > 0">
+    <div *ngFor="let chartData of chartsData" >
+      <pie-chart [series]="chartData.series"  [labels]="chartData.labels" [title]="chartData.title" (click)="onChartLoad($event)"></pie-chart>
+    </div>
   </div>
+  </div>
+  
 </body>
 </html>

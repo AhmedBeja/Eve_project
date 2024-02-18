@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: ViewEnergyComponent },
   { path: 'home', component: HomeComponent },
   { path: 'glossaire', component: ViewGlossary },
-  { path: 'comparateur', component: ViewComparator}
+  { path: 'comparateur', component: ViewComparator},
 ];
 
 @NgModule({

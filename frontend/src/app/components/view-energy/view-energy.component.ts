@@ -22,20 +22,23 @@ export class ViewEnergyComponent implements OnInit {
 
   chartSeries: ApexNonAxisChartSeries = [];
   chartLabels: string[] = [];
-  chartDetails: ApexChart = {
-    type: 'pie',
-    toolbar: {
-      show: true
+
+  chartTitleEnergy: ApexTitleSubtitle = {
+    text: 'Energies',
+    align: 'center',
+    style: {
+      fontSize: "12"
     }
   };
-  chartTitle: ApexTitleSubtitle = {
-    text: 'Energies',
-    align: 'center'
-  };
-  chartDataLabels: ApexDataLabels = {
-    enabled: true
-  };
 
+  chartTitleProd: ApexTitleSubtitle = {
+    text: 'Moyen de production',
+    align: 'center',
+    style: {
+      fontSize: "12"
+    }
+  };
+ 
   chartsData: any[] = [];
   ngOnInit(): void {
     this.Energies_typeService.getEnergies_type().subscribe(data => {
@@ -46,14 +49,13 @@ export class ViewEnergyComponent implements OnInit {
       this.chartsData.push({
         series: this.chartSeries,
         labels: this.chartLabels,
-        title: 'Energies'
+        title: this.chartTitleEnergy
       });
     });
 }
 onChartLoad(chart: any): void {
   const clickedPart = chart.target.parentElement.getAttribute("data:realIndex");
   const clickedElementDetails = this.energies_type[clickedPart];
-  console.log(clickedElementDetails)
 
   if(clickedElementDetails.group == 'Type'){
     this.Energies_meanService.getEnergies_meanByType(clickedElementDetails.type).subscribe(filteredData => {
@@ -72,16 +74,15 @@ loadEnergiesMean(clickedEnergyType: any): void {
     title: 'Moyen de production'
   };
   this.Energies_meanService.getEnergies_meanByType(clickedEnergyType).subscribe(newChartData => {
-    //console.log(clickedEnergyType)
     // Met à jour les propriétés du composant avec les nouvelles données
     this.chartSeries = newChartData.map((energy: any) => energy.pourcentage);
     this.chartLabels = newChartData.map((energy: any) => energy.type);
     this.chartsData.push({
       series: this.chartSeries,
       labels: this.chartLabels,
-      title: 'Moyen de production'
+      title: this.chartTitleProd
     });
-
+    console.log(this.chartsData)
   });
 }
 

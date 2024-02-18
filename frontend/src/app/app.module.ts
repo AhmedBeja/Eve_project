@@ -9,13 +9,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { SearchComponent } from './components/search/search.component';
 import { ViewGlossary } from './components/glossary/glossary.component';
+import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewEnergyComponent,
     SearchComponent,
-    ViewGlossary
+    ViewGlossary,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
