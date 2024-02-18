@@ -5,7 +5,7 @@
     <main>
         <section>
             <app-search (inputChanged)="applyFilter($event)"></app-search>
-              <div *ngFor="let item of filteredGlossary">
+              <div *ngFor="let item of filteredGlossary" >
                 <h2>{{ item.term }}</h2>
                 <p>{{ item.definition }}</p>
               </div>
