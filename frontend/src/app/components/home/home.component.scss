@@ -37,19 +37,20 @@ h2 {
 }
 
 button {
-    background-color: #177e89;
-    color: #fff;
+    background-color: white;
+    border: 2px solid #177e89;
+    color: #177e89;
     font-weight: bold;
     font-size: 15pt;
     padding: 10px 20px;
     margin: 20px;
-    border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0d5c64;
+    background-color: #177e89;
+    color: white;
 }
 
 .intro{
@@ -87,7 +88,7 @@ button:hover {
 }
 
 img{
-    width: 500px;
+    width: 500px; //si on veux que ces soit adaptable à la taille de l'écran, mettre en %
 }
 
 .text_image{
@@ -119,6 +120,14 @@ img{
     width: 50%;
     margin: 40px;
     padding: 20px;
+}
+
+.img_enr{
+    width: 70%;
+}
+
+.spacer{
+    height: 10%;
 }
 
 .elec_image{
