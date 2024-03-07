@@ -105,12 +105,14 @@ button:hover {
 }
 
 img{
-    width: 500px; //si on veux que ces soit adaptable à la taille de l'écran, mettre en %
+    width: 40%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .text_image{
     margin: 30px 0px 30px 0px;
-    padding: 20px 40px 20px 60px;
+    padding: 20px 40px 20px 40px;
     background-color: #aae0f4;
     display: flex;
     justify-content: center;

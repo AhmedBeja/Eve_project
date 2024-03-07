@@ -42,7 +42,7 @@ import { EnergiesService } from 'src/app/energies.service';
     } else if (energy1Cost > energy2Cost) {
       this.result = `${energy1Details.name} a un LCOE supérieur à ${energy2Details.name} (${energy1Details.lcoe}>${energy2Details.lcoe})`;
     } else {
-      this.result = `${energy1Details.name} et ${energy2Details.name} ont le même LCOE (${energy1Details.lcoe}`;
+      this.result = `${energy1Details.name} et ${energy2Details.name} ont le même LCOE (${energy1Details.lcoe})`;
     }
   } else {
     this.result = 'Impossible de comparer les énergies sélectionnées.';

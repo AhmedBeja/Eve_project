@@ -1,12 +1,12 @@
 <div class="container">
     <div class="select-box">
-      <label for="energy1">Choisir énergie 1 :</label>
+      <label for="energy1">Choix de l'énergie 1 :</label>
       <select id="energy1" #energy1Select>
         <option *ngFor="let energie of energies_list" value={{energie.name}}>{{energie.name}}</option>
       </select>
     </div>
     <div class="select-box">
-      <label for="energy2">Choisir énergie 2 :</label>
+      <label for="energy2">Choix de l'énergie 2 :</label>
       <select id="energy2" #energy2Select>
         <option *ngFor="let energie of energies_list" value={{energie.name}}>{{energie.name}}</option>
       </select>
