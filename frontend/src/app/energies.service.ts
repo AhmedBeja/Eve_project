@@ -15,6 +15,10 @@ export class EnergiesService {
   getEnergies(): Observable<Energy[]> {
     return this.http.get<Energy[]>(this.url);
   }
+  getEnergies_Details(type: string): Observable<Energy[]> {
+
+    return this.http.get<Energy[]>(this.url).pipe(map((energies: Energy[]) => energies.filter(energy => energy.name === type)));
+  }
 
 }
 
@@ -47,5 +51,8 @@ export class Energies_meanService {
         // Utilisation de l'opérateur map pour filtrer les données en fonction du type
         map((energies_mean: Energy_mean[]) => energies_mean.filter(energy => energy.family === type))
       );
+  }
+  getEnergies_mean():Observable<Energy_mean[]> {
+    return this.http.get<Energy_mean[]>(this.url);
   }
 }

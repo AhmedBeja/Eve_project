@@ -7,6 +7,9 @@ class Energie(models.Model):
     description = models.CharField(max_length=255)
     lcoe = models.CharField(max_length=255)
     group=models.CharField(max_length=255)
+    electricite=models.IntegerField()
+    chaleur=models.IntegerField()
+    combustible=models.IntegerField()
 
     def __str__(self):
         return self.name

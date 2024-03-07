@@ -4,6 +4,9 @@ export interface Energy {
     description: string;
     lcoe: string;
     group: string;
+    electricite: number;
+    chaleur: number;
+    combustible: number;
 }
 
 export interface Energy_type {

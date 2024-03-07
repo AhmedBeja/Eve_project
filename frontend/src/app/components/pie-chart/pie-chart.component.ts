@@ -24,7 +24,8 @@ export class PieChartComponent implements OnInit {
     type: 'donut',
     toolbar: {
       show: true
-    }
+    },
+    
   };
 
   dataLabels: ApexDataLabels = {

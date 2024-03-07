@@ -7,14 +7,31 @@
     <title>View Users</title>
 </head>
 <body>
-  <div class="chartContainer" >
-    
+  <div class="container">
+  <div class="chartContainer" >    
   <div *ngIf="chartsData.length > 0">
     <div *ngFor="let chartData of chartsData" >
       <pie-chart [series]="chartData.series"  [labels]="chartData.labels" [title]="chartData.title" (click)="onChartLoad($event)"></pie-chart>
     </div>
   </div>
   </div>
-  
+  <div class="table-container" *ngIf="displayTable">
+    <button class="close-button" (click)="hideTable()">Fermer</button>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>LCOE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let detail of energies_details">
+          <td>{{ detail.description }}</td>
+          <td>{{ detail.lcoe }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</div>
 </body>
 </html>
