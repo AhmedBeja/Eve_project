@@ -53,6 +53,23 @@ button:hover {
     color: white;
 }
 
+.sankey {
+    background-color: #aae0f4;
+    border: 2px solid #353535;
+    color: #353535;
+    font-weight: bold;
+    font-size: 15pt;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.sankey:hover {
+    background-color: #353535;
+    color: white;
+}
+
 .intro{
     margin: 0px 60px 0px 60px;
 }
