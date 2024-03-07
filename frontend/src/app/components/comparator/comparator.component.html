@@ -1,18 +1,14 @@
-<<div class="container">
+<div class="container">
     <div class="select-box">
       <label for="energy1">Choisir énergie 1 :</label>
       <select id="energy1" #energy1Select>
-        <option value="electricity">Electricité</option>
-        <option value="gas">Gaz</option>
-        <!-- Ajoutez d'autres options si nécessaire -->
+        <option *ngFor="let energie of energies_list" value={{energie.name}}>{{energie.name}}</option>
       </select>
     </div>
     <div class="select-box">
       <label for="energy2">Choisir énergie 2 :</label>
       <select id="energy2" #energy2Select>
-        <option value="electricity">Electricité</option>
-        <option value="gas">Gaz</option>
-        <!-- Ajoutez d'autres options si nécessaire -->
+        <option *ngFor="let energie of energies_list" value={{energie.name}}>{{energie.name}}</option>
       </select>
     </div>
     <button (click)="compare()">Lancer la comparaison</button>

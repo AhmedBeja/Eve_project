@@ -11,6 +11,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ViewGlossary } from './components/glossary/glossary.component';
 import { HomeComponent } from './components/home/home.component';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
+import { ViewComparator } from './components/comparator/comparator.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PieChartComponent } from './components/pie-chart/pie-chart.component';
     SearchComponent,
     ViewGlossary,
     HomeComponent,
-    PieChartComponent
+    PieChartComponent,
+    ViewComparator
   ],
   imports: [
     BrowserModule,
