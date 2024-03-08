@@ -12,5 +12,32 @@
       </select>
     </div>
     <button (click)="compare()">Lancer la comparaison</button>
-    <div id="results">{{ result }}</div>
+    <div *ngIf="energy1Details && energy2Details">
+      <table>
+        <thead>
+          <tr>
+            <th>{{ energy1Details.name }}</th>
+            <th> </th>
+            <th>{{ energy2Details.name }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ energy1Details.lcoe }}</td>
+            <td class="detail"> LCOE </td>
+            <td>{{ energy2Details.lcoe }}</td>
+          </tr>
+          <tr>
+            <td>{{ energy1Details.lcoe }}</td>
+            <td class="detail"> Chiffre clé 2 </td>
+            <td>{{ energy2Details.lcoe }}</td>
+          </tr>
+          <tr>
+            <td>{{ energy1Details.lcoe }}</td>
+            <td class="detail"> Chiffre clé 3 </td>
+            <td>{{ energy2Details.lcoe }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>

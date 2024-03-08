@@ -49,4 +49,35 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
   }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 10px 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+
+  .detail {
+    color: #177e89;
+    font-weight: bold;
+  }
+  
+  thead {
+    background-color: #177e89;
+    color: white;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
   
