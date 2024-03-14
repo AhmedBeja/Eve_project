@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Energy,Energy_mean,Energy_type } from './Energies';
+import { Energy,Energy_mean,Energy_type, Energy_vector } from './Energies';
 import { HttpClient } from '@angular/common/http';
 import { Observable,map } from 'rxjs';
 
@@ -32,6 +32,19 @@ export class Energies_typeService {
 
   getEnergies_type(): Observable<Energy_type[]> {
     return this.http.get<Energy_type[]>(this.url);
+  }
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class Energies_vectorService {
+  private url: string = 'http://localhost:8000/api/energies_vector';
+
+  constructor(private http: HttpClient) { }
+
+  getEnergies_vector(): Observable<Energy_vector[]> {
+    return this.http.get<Energy_vector[]>(this.url);
   }
 }
 
