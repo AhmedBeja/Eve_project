@@ -24,18 +24,54 @@
         <tbody>
           <tr>
             <td>{{ energy1Details.lcoe }}</td>
-            <td class="detail"> LCOE </td>
+            <td class="detail"> Coût d'un kWh (LCOE) </td>
             <td>{{ energy2Details.lcoe }}</td>
           </tr>
           <tr>
-            <td>{{ energy1Details.lcoe }}</td>
-            <td class="detail"> Chiffre clé 2 </td>
-            <td>{{ energy2Details.lcoe }}</td>
+            <td>{{ energy1Details.installation }}</td>
+            <td class="detail"> Nombre de tranches installées en FR en 2023 </td>
+            <td>{{ energy2Details.installation }}</td>
           </tr>
           <tr>
-            <td>{{ energy1Details.lcoe }}</td>
-            <td class="detail"> Chiffre clé 3 </td>
-            <td>{{ energy2Details.lcoe }}</td>
+            <td>{{ energy1Details.surface }}</td>
+            <td class="detail"> Surface au sol (Nombre de km2 nécessaires pour produire 1TWh par an) </td>
+            <td>{{ energy2Details.surface }}</td>
+          </tr>
+          <tr>
+            <td>{{ energy1Details.rendement }}</td>
+            <td class="detail"> Rendement </td>
+            <td>{{ energy2Details.rendement }}</td>
+          </tr>
+          <tr>
+            <td>{{ energy1Details.puissance_installee }}</td>
+            <td class="detail"> Puissance totale installée </td>
+            <td>{{ energy2Details.puissance_installee }}</td>
+          </tr>
+          <tr>
+            <td>{{ energy1Details.puissance_unitaire }}</td>
+            <td class="detail"> Puissance Unitaire </td>
+            <td>{{ energy2Details.puissance_unitaire}}</td>
+          </tr>
+          <tr>
+            <td>{{ energy1Details.puissance_vulgarisee }}</td>
+            <td class="detail"> Production annuelle et équivalent vulgarisé
+            </td>
+            <td>{{ energy2Details.puissance_vulgarisee}}</td>
+          </tr>
+          <tr>
+            <td>{{ energy1Details.equivalent_petrole}}</td>
+            <td class="detail"> Équivalent Pétrole </td>
+            <td>{{ energy2Details.equivalent_petrole }}</td>
+          </tr>
+          <tr>
+            <td>{{ energy1Details.acteurs_principaux}}</td>
+            <td class="detail"> Acteurs principaux de construction/exploitation </td>
+            <td>{{ energy2Details.acteurs_principaux }}</td>
+          </tr>
+          <tr>
+            <td>{{ energy1Details.duree_vie }}</td>
+            <td class="detail"> Durée de vie </td>
+            <td>{{ energy2Details.duree_vie }}</td>
           </tr>
         </tbody>
       </table>
