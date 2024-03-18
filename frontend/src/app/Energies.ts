@@ -14,6 +14,7 @@ export interface Energy {
     equivalent_petrole:string;
     acteurs_principaux:string;
     duree_vie:string;
+    cout_du_combustible:string;
     points_negatifs:string;
     idee_recue:string;
     tendance:string;
