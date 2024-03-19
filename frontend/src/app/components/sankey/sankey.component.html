@@ -1,23 +1,32 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagramme de Sankey</title>
-</head>
 <body>
     <header>
         <h1>Diagramme de Sankey</h1>
     </header>
-    <p>Un diagramme de Sankey est un type de diagramme de flux dans lequel la largeur des flèches est proportionnelle au flux représenté. Les diagrammes de Sankey sont utilisés en particulier pour visualiser les flux énergétiques de processus.</p>
-    <img src="assets/ensemble-des-energies-cgdd-2023.png" class="image_sankey">
-    <p><em>Le diagramme de Sankey, représenté ici et communément utilisé pour représenter des bilans énergétiques, retrace l'ensemble des flux (approvisionnement, transformation, consommation, y compris pertes) sous forme de flèches de largeur proportionnelle à la quantité d'énergie.</em></p>
-    <p><span>1. Pour obtenir la consommation primaire, il faut déduire des ressources primaires le solde exportateur d'électricité ainsi que les soutes maritimes et aériennes internationales.</span></p>
-    <p><span>2. Y compris énergies marines, hors accumulation par pompage.</span></p>
-    <p><span>3. Énergies renouvelables thermiques (bois, déchets de bois, solaire thermique, biocarburants, pompes à chaleur, etc.).</span></p>
-    <p><span>4. L'importance des pertes dans le domaine de l'électricité tient au fait que la production nucléaire est comptabilisée pour la chaleur produite par la réaction, chaleur dont les deux tiers sont perdus lors de la conversion en énergie électrique.</span></p>
-    <p><span>5. Usages non énergétiques inclus. Pour le charbon, les produits pétroliers raffinés et le gaz naturel, la décomposition de la consommation finale en usages énergétiques et non énergétiques est indiquée entre parenthèses.</span></p>
-    <p>Cette représentation permet de visualiser la répartition des sources d'énergie finale utilisées en France (partie de droite), ainsi que l’ensemble des pertes du système énergétique associées à la conversion des ressources primaires (partie haute). On y lit notamment qu'en 2022 le système énergétique français a consommé 2 530 TWh d’énergie primaire, pour une énergie finale disponible à la consommation de 1 657 TWh. Cette différence s’explique principalement par les pertes lors de la conversion des énergies primaires en énergie électrique. Le reste de cette différence est imputé aux exportations d’électricité et de pétrole pour le transport international.</p>
-    <p>Prenons comme exemple le cas du pétrole brut et des produits pétroliers raffinés en tant que <strong>ressources primaires</strong>. On peut lire que l’on a consommé en France en 2022 un total de <strong>816 TWh</strong>. Parmi eux, 809 TWh ont été importés et 7 TWh ont été produits ou sont provenus du déstockage national. Le graphique nous informe ensuite que 13 TWh et 50 TWh ont été respectivement utilisés dans les soutes internationales maritimes et aériennes. Dans ce diagramme de Sankey, les soutes internationales désignent la consommation énergétique (carburants) du transport aérien et maritime international. On remarque ensuite que les pertes et usages du système énergétique sont responsables d’une baisse de 25 TWh de nos ressources primaires. On aura donc à la fin un total de <strong>711 TWh d’énergie finale utilisable</strong>.</p>
+    <main>
+        <p>
+            Un diagramme de Sankey est un type de diagramme de flux dans lequel la largeur des flèches est proportionnelle au flux représenté. 
+            <br>Les diagrammes de Sankey sont utilisés en particulier pour visualiser les flux énergétiques de processus.
+        </p>
+        <div class="image_sankey">
+            <img src="assets/ensemble-des-energies-cgdd-2023.png">
+            <p class="legend">
+            Le diagramme de Sankey, représenté ici et communément utilisé pour représenter des bilans énergétiques, retrace l'ensemble des flux (approvisionnement, transformation, consommation, y compris pertes) sous forme de flèches de largeur proportionnelle à la quantité d'énergie.
+            <br>
+            <br><sup>1.</sup> Pour obtenir la consommation primaire, il faut déduire des ressources primaires le solde exportateur d'électricité ainsi que les soutes maritimes et aériennes internationales.
+            <br><sup>2.</sup> Y compris énergies marines, hors accumulation par pompage.
+            <br><sup>3.</sup> Énergies renouvelables thermiques (bois, déchets de bois, solaire thermique, biocarburants, pompes à chaleur, etc.).
+            <br><sup>4.</sup> L'importance des pertes dans le domaine de l'électricité tient au fait que la production nucléaire est comptabilisée pour la chaleur produite par la réaction, chaleur dont les deux tiers sont perdus lors de la conversion en énergie électrique.
+            <br><sup>5.</sup> Usages non énergétiques inclus. Pour le charbon, les produits pétroliers raffinés et le gaz naturel, la décomposition de la consommation finale en usages énergétiques et non énergétiques est indiquée entre parenthèses.
+        </p>
+        </div>
+        <p class="text_1"><strong> Cette représentation permet de visualiser la répartition des sources d'énergie finale utilisées en France (partie de droite), ainsi que l’ensemble des pertes du système énergétique associées à la conversion des ressources primaires (partie haute). </strong>
+            <br>On y lit notamment qu'en 2022 le système énergétique français a consommé 2 530 TWh d’énergie primaire, pour une énergie finale disponible à la consommation de 1 657 TWh. Cette différence s’explique principalement par les pertes lors de la conversion des énergies primaires en énergie électrique. Le reste de cette différence est imputé aux exportations d’électricité et de pétrole pour le transport international.</p>
+        <p class="text_2">Prenons comme exemple le cas du pétrole brut et des produits pétroliers raffinés en tant que <strong>ressources primaires</strong>. 
+            <br>
+            <br>On peut lire que l’on a consommé en France en 2022 un total de <strong>816 TWh</strong>. 
+            <br>
+            <br>Parmi eux, 809 TWh ont été importés et 7 TWh ont été produits ou sont provenus du déstockage national. Le graphique nous informe ensuite que 13 TWh et 50 TWh ont été respectivement utilisés dans les soutes internationales maritimes et aériennes. Dans ce diagramme de Sankey, les soutes internationales désignent la consommation énergétique (carburants) du transport aérien et maritime international. On remarque ensuite que les pertes et usages du système énergétique sont responsables d’une baisse de 25 TWh de nos ressources primaires. 
+            <br>
+            <br>On aura donc à la fin un total de <strong>711 TWh d’énergie finale utilisable</strong>.</p>
+    </main> 
 </body>
-</html>

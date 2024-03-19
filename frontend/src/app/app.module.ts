@@ -12,6 +12,7 @@ import { ViewGlossary } from './components/glossary/glossary.component';
 import { HomeComponent } from './components/home/home.component';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 import { ViewComparator } from './components/comparator/comparator.component';
+import { SankeyComponent } from './components/sankey/sankey.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ViewComparator } from './components/comparator/comparator.component';
     ViewGlossary,
     HomeComponent,
     PieChartComponent,
-    ViewComparator
+    ViewComparator,
+    SankeyComponent
   ],
   imports: [
     BrowserModule,
