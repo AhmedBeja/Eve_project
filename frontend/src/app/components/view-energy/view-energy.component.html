@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Users</title>
-</head>
 <body>
-  <div>
-    <button id="button-prod" (click)="showPie('button-prod')">Commencer par la prod totale</button>
-    <button id="button-vector" (click)="showPie('button-vector')">Commencer par les vecteur d'énergie</button>
-  </div>
  <div class="main-container">
   <div class="container">
     <div class="chartContainer" >
+      <button id="button-prod" (click)="showPie('button-prod')">Commencer par la prod totale</button>
       <div class="pie-chartContainer" id="prod-pie" *ngIf="showPieProd">
         <div *ngIf="chartsData.length > 0">
           <div *ngFor="let chartData of chartsData" >
@@ -26,6 +15,7 @@
     </div>
   
     <div class="chartContainer" >
+      <button id="button-vector" (click)="showPie('button-vector')">Commencer par les vecteur d'énergie</button>
       <div class="pie-chartContainer" id="vector-pie" *ngIf="showPieVector">
         <div *ngFor="let chartData of chartsData2" >
           <div class="{{chartData.title.text}}">
@@ -36,17 +26,16 @@
     </div>
   </div>
   <div class="table-container" *ngIf="displayTable">
-    <button class="close-button" (click)="hideTable()">Fermer</button>
+    <button class="table-button" (click)="hideTable()">Fermer</button>
     <table class="styled-table">
       <thead>
         <tr>
-          <th><button (click)="showTable('td_fonctionnement')">Fonctionnement</button></th>
-          <th><button (click)="showTable('td_chiffres')">Chiffres clés</button></th>
-          <th><button (click)="showTable('td_avantages')">Avantages/Inconvénients</button> </th>
+          <th><button class="table-button" (click)="showTable('td_fonctionnement')">Fonctionnement</button></th>
+          <th><button class="table-button" (click)="showTable('td_chiffres')">Chiffres clés</button></th>
+          <th><button class="table-button" (click)="showTable('td_avantages')">Avantages/Inconvénients</button> </th>
         </tr>
       </thead>
       <tbody>
-        
         <tr *ngFor="let detail of energies_details">
           <td *ngIf="showFonctionnement" id="td_fonctionnement" colspan="3">{{ detail.description }}</td>
           <td *ngIf="showChiffres" id="td_chiffres" colspan="3">{{ detail.lcoe }}</td>
@@ -57,4 +46,3 @@
 </div>
 </div> 
 </body>
-</html>

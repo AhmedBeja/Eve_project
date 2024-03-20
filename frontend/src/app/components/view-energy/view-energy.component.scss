@@ -1,25 +1,27 @@
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex; 
+  flex-direction: row;
+}
+
 .chartContainer {
     width: 500px;
     height: 500px;
 }
-
-.container {
-    display: flex; 
-  }
-
-  .main-container {
-    display: grid;
-    grid-template-columns: 1000px 1000px 1000px; 
-  }
-  
   .chartContainer {
-    flex-basis: 50%; 
+    display: flex;
+    flex-direction: column;
   }
   
   .table-container {
-    flex-basis: 50%;
+    margin-top: 700px;
   }
-  
+
   .styled-table {
     width: 100%;
     border-collapse: collapse;
@@ -55,4 +57,41 @@
 .Energies{
     grid-column-start: 1;
     grid-column-end: 4;
+}
+
+.boutons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: white;
+  border: 2px solid #177e89;
+  color: #177e89;
+  font-weight: bold;
+  font-size: 15pt;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #177e89;
+  color: white;
+}
+
+.table-button{
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 10pt;
+  border: 2px solid #353535;
+  color: #353535;
+  margin-left: 10px;
+}
+
+.table-button:hover {
+  background-color: #353535;
+  color: white;
 }

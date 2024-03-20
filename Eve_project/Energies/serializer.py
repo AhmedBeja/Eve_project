@@ -5,7 +5,7 @@ from .models import Energie,Energy_mean,Energy_type,Energy_vector
 class EnergieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Energie
-        fields = ('id', 'name', 'description', 'lcoe','group','electricite','chaleur','combustible','description_electricite','type_technologie','installation','surface','rendement','puissance_installee','type_technologie','puissance_unitaire','puissance_vulgarisee','equivalent_petrole','acteurs_principaux','duree_vie','points_negatifs','idee_recue','tendance')
+        fields = ('id', 'name', 'description', 'lcoe','group','electricite','chaleur','combustible','description_electricite','type_technologie','installation','surface','rendement','puissance_installee','type_technologie','puissance_unitaire','puissance_vulgarisee','equivalent_petrole','acteurs_principaux','duree_vie','cout_du_combustible','points_negatifs','idee_recue','tendance')
 
 class Energie_meanSerializer(serializers.ModelSerializer):
     class Meta:

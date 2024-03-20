@@ -17,6 +17,7 @@ class Energie(models.Model):
     equivalent_petrole=models.CharField(max_length=255)
     acteurs_principaux=models.CharField(max_length=255)
     duree_vie=models.CharField(max_length=255)
+    cout_du_combustible=models.CharField(max_length=255)
     points_negatifs=models.CharField(max_length=255)
     idee_recue=models.CharField(max_length=255)
     tendance=models.CharField(max_length=255)
