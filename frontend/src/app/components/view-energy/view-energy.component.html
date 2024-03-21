@@ -41,7 +41,10 @@
        </thead>
        <tbody>
           <tr *ngFor="let detail of energies_details">
-            <td *ngIf="showFonctionnement" id="td_fonctionnement" colspan="3">{{ detail.description }}</td>
+            <td *ngIf="showFonctionnement" id="td_fonctionnement" colspan="3"><strong>Principe de fonctionnement pour la production d'énergie : </strong>{{ detail.description }}</td>
+            <td *ngIf="showFonctionnement" id="td_fonctionnement" colspan="3"><strong>Différents types de technologie : </strong>{{ detail.type_technologie }}</td>
+            <td *ngIf="showFonctionnement" id="td_fonctionnement" colspan="3"><strong>Densité massique énergétique :</strong>{{ detail.densite_massique }}</td>
+            <td *ngIf="showFonctionnement" id="td_fonctionnement" colspan="3"><strong>Emission de CO2/kWh</strong>{{ detail.CO2 }}</td>
           </tr>
           <th><button class="table-button" (click)="showTable('td_chiffres')">Chiffres clés</button></th>
           <tr *ngFor="let detail of energies_details">

@@ -7,6 +7,8 @@ class Energie(models.Model):
     description = models.CharField(max_length=1000)
     description_electricite= models.CharField(max_length=255)
     type_technologie=models.CharField(max_length=255)
+    densite_massique=models.CharField(max_length=255)
+    CO2=models.CharField(max_length=255)
     installation=models.CharField(max_length=255)
     surface=models.CharField(max_length=255)
     rendement=models.CharField(max_length=255)
