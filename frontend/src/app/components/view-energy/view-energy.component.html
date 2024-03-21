@@ -45,12 +45,22 @@
           </tr>
           <th><button class="table-button" (click)="showTable('td_chiffres')">Chiffres clés</button></th>
           <tr *ngFor="let detail of energies_details">
-            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"> Coût d'un kWh (LCOE) : {{ detail.lcoe }}</td>
-            <td *ngIf="showChiffres" id="td_chiffres" colspan="3">{{ detail.lcoe }}</td>
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"> <strong> Coût d'un kWh (LCOE) :</strong> {{ detail.lcoe }}</td>
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"> <strong>Nombre de tranches installées en FR en 2023 :</strong> {{ detail.installation }}</td>
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"><strong>Surface au sol (Nombre de km2 nécessaires pour produire 1TWh par an) :</strong> {{ detail.surface }}</td>
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"><strong>Rendement :</strong> {{ detail.rendement }}</td>
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"><strong>Puissance totale installée :</strong> {{ detail.puissance_installee }}</td>
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"><strong>Puissance Unitaire :</strong> {{ detail.puissance_unitaire}}</td>
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"><strong>Production annuelle et équivalent vulgarisé :</strong> {{ detail.puissance_vulgarisee}}</td>
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"><strong> Équivalent Pétrole :</strong> {{ detail.equivalent_petrole }}</td>
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"> <strong>Acteurs principaux de construction/exploitation :</strong> {{ detail.acteurs_principaux }}</td>
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"> <strong>Durée de vie :</strong> {{ detail.duree_vie }}</td>
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"> <strong>>Coût du combustible :</strong> {{ detail.cout_du_combustible }}</td>
           </tr>
           <th><button class="table-button" (click)="showTable('td_avantages')">Avantages/Inconvénients</button> </th>
           <tr *ngFor="let detail of energies_details">
-            <td *ngIf="showAvantages" id="td_avantages" colspan="3">{{ detail.tendance }}</td>
+            <td *ngIf="showAvantages" id="td_avantages" colspan="3"><strong>Avantages :</strong> {{ detail.idee_recue }}</td>
+            <td *ngIf="showAvantages" id="td_avantages" colspan="3"><strong>Inconvénients :</strong> {{ detail.points_negatifs }}</td>
           </tr>
        </tbody>
      </table>
