@@ -1,4 +1,3 @@
-
 .main-container {
   display: flex;
   flex-direction: column;
@@ -6,6 +5,7 @@
 
 .container {
   display: flex; 
+  justify-content: center;
   flex-direction: row;
 }
 
@@ -16,6 +16,7 @@
   .chartContainer {
     display: flex;
     flex-direction: column;
+    margin: 40px;
   }
   
   .table-container {
@@ -33,6 +34,8 @@
     padding: 12px 15px;
     text-align: left;
     border-bottom: 1px solid #e0e0e0;
+      display: flex;
+    flex-direction: column;
   }
   
   .styled-table th {
@@ -44,9 +47,6 @@
     background-color: #f9f9f9;
   }
   
-  .styled-table tbody tr:hover {
-    background-color: #e9e9e9;
-  }
 
   .pie-chartContainer {
       display: grid;
@@ -94,4 +94,40 @@ button:hover {
 .table-button:hover {
   background-color: #353535;
   color: white;
+}
+
+.close-button{
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 10pt;
+  border: 2px solid #353535;
+  color: #353535;
+  margin-left: 90%;
+  
+}
+
+.close-button:hover {
+  background-color: #353535;
+  color: white;
+}
+
+
+.text {
+  text-align: justify;
+  padding: 10px 100px;
+  margin: 10px 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+  text-align:center;
+  background-color: #f3f3f3;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  h1 {
+    font-size: 20pt;
+    font-weight: 700;
+    font-style: normal;
+    margin: 20px;
+  }
 }

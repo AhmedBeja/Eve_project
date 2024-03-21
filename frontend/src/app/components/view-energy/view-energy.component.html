@@ -1,48 +1,60 @@
 <body>
- <div class="main-container">
-  <div class="container">
-    <div class="chartContainer" >
-      <button id="button-prod" (click)="showPie('button-prod')">Commencer par la prod totale</button>
-      <div class="pie-chartContainer" id="prod-pie" *ngIf="showPieProd">
-        <div *ngIf="chartsData.length > 0">
-          <div *ngFor="let chartData of chartsData" >
-            <div class="{{chartData.title.text}}">
-              <pie-chart [series]="chartData.series"  [labels]="chartData.labels" [title]="chartData.title" (click)="onChartLoad($event)"></pie-chart>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="chartContainer" >
-      <button id="button-vector" (click)="showPie('button-vector')">Commencer par les vecteur d'énergie</button>
-      <div class="pie-chartContainer" id="vector-pie" *ngIf="showPieVector">
-        <div *ngFor="let chartData of chartsData2" >
-          <div class="{{chartData.title.text}}">
-            <pie-chart [series]="chartData.series"  [labels]="chartData.labels" [title]="chartData.title" (click)="onChartLoad($event)"></pie-chart>
-          </div>
-        </div>  
-      </div>
-    </div>
-  </div>
-  <div class="table-container" *ngIf="displayTable">
-    <button class="table-button" (click)="hideTable()">Fermer</button>
-    <table class="styled-table">
-      <thead>
-        <tr>
-          <th><button class="table-button" (click)="showTable('td_fonctionnement')">Fonctionnement</button></th>
+  <div class="main-container">
+   <div class="text">
+   <h1>Carte Mentale</h1>
+   <p> Cette carte mentale est une représentation visuelle des données qui permet de les organiser, de les synthétiser et de les explorer de manière intéractive autour d'un thème centrale : le mix énergétique français.
+     <br> Il y a deux possibilités : déployer les diagrammes en partant du mix de la <strong>Consommation d'énergie primaire</strong> (bouton de gauche), ou bien partir de la <strong>Répartition des vecteurs énergétiques</strong> (bouton de droite).
+   </p>
+ </div>
+   <div class="container">
+     <div class="chartContainer" >
+       <button id="button-prod" (click)="showPie('button-prod')">Commencer par la consommation en énergie primaire</button>
+       <div class="pie-chartContainer" id="prod-pie" *ngIf="showPieProd">
+         <div *ngIf="chartsData.length > 0">
+           <div *ngFor="let chartData of chartsData" >
+             <div class="{{chartData.title.text}}">
+               <pie-chart [series]="chartData.series"  [labels]="chartData.labels" [title]="chartData.title" (click)="onChartLoad($event)"></pie-chart>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   
+     <div class="chartContainer" >
+       <button id="button-vector" (click)="showPie('button-vector')">Commencer par la consommation des vecteur d'énergie</button>
+       <div class="pie-chartContainer" id="vector-pie" *ngIf="showPieVector">
+         <div *ngFor="let chartData of chartsData2" >
+           <div class="{{chartData.title.text}}">
+             <pie-chart [series]="chartData.series"  [labels]="chartData.labels" [title]="chartData.title" (click)="onChartLoad($event)"></pie-chart>
+           </div>
+         </div>  
+       </div>
+     </div>
+   </div>
+   <div class="table-container" *ngIf="displayTable">
+     <button class="close-button" (click)="hideTable()">Fermer</button>
+     <table class="styled-table">
+       <thead>
+         <tr>
+           <th><button class="table-button" (click)="showTable('td_fonctionnement')">Fonctionnement</button></th>
+         </tr>
+       </thead>
+       <tbody>
+          <tr *ngFor="let detail of energies_details">
+            <td *ngIf="showFonctionnement" id="td_fonctionnement" colspan="3">{{ detail.description }}</td>
+          </tr>
           <th><button class="table-button" (click)="showTable('td_chiffres')">Chiffres clés</button></th>
+          <tr *ngFor="let detail of energies_details">
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3"> Coût d'un kWh (LCOE) : {{ detail.lcoe }}</td>
+            <td *ngIf="showChiffres" id="td_chiffres" colspan="3">{{ detail.lcoe }}</td>
+          </tr>
           <th><button class="table-button" (click)="showTable('td_avantages')">Avantages/Inconvénients</button> </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let detail of energies_details">
-          <td *ngIf="showFonctionnement" id="td_fonctionnement" colspan="3">{{ detail.description }}</td>
-          <td *ngIf="showChiffres" id="td_chiffres" colspan="3">{{ detail.lcoe }}</td>
-          <td *ngIf="showAvantages" id="td_avantages" colspan="3">{{ detail.tendance }}</td>
-        </tr>
-      </tbody>
-    </table>
-</div>
-</div> 
-</body>
+          <tr *ngFor="let detail of energies_details">
+            <td *ngIf="showAvantages" id="td_avantages" colspan="3">{{ detail.tendance }}</td>
+          </tr>
+       </tbody>
+     </table>
+ </div>
+ </div> 
+ </body>
+ 
