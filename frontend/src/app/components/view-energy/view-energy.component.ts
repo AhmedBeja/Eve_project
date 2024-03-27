@@ -41,7 +41,7 @@ export class ViewEnergyComponent implements OnInit {
   chartLabels2: string[] = [];
 
   chartTitleEnergy: ApexTitleSubtitle = {
-    text: 'Energies',
+    text: "Type d'énergies primaires consommées",
     align: 'center',
     style: {
       fontSize: "12"
@@ -49,7 +49,7 @@ export class ViewEnergyComponent implements OnInit {
   };
 
   chartTitleProd: ApexTitleSubtitle = {
-    text: 'Moyen de production',
+    text: 'Moyen de production des énergies primaires',
     align: 'center',
     style: {
       fontSize: "12"
@@ -57,7 +57,7 @@ export class ViewEnergyComponent implements OnInit {
   };
 
   chartTitleProdEnergy: ApexTitleSubtitle = {
-    text: 'Répartition de production',
+    text: "Répartition de la production d'énergie primaire sur les vecteurs d'énergies",
     align: 'center',
     style: {
       fontSize: "12"
