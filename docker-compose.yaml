@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  backend:
+    image: eve_project-backend
+
+  backend_migrate:
+    extends:
+      service: backend
+    command: python manage.py migrate
+
+  backend_runserver:
+    extends:
+      service: backend
+    command: python manage.py runserver 0.0.0.0:8000
+    networks:
+      - proxy-network
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.docker.network=proxy-network'
+      - 'traefik.http.routers.backend.rule=Host(`api.eveproject.outildev.fr`)'
+      - 'traefik.http.routers.backend.entrypoints=websecure'
+      - 'traefik.http.routers.backend.tls=true'
+      - "traefik.http.services.backend.loadbalancer.server.port=8000"
+      - 'traefik.http.routers.backend.tls.certresolver=letsencrypt'
+
+  angular:
+    image: eve_project-angular
+    networks:
+      - proxy-network
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.docker.network=proxy-network'
+      - 'traefik.http.routers.angular.rule=Host(`eveproject.outildev.fr`)'
+      - 'traefik.http.routers.angular.entrypoints=websecure'
+      - 'traefik.http.routers.angular.tls=true'
+      - "traefik.http.services.angular.loadbalancer.server.port=4200"
+      - 'traefik.http.routers.angular.tls.certresolver=letsencrypt'
+
+networks:
+  proxy-network:
+    external: true
+    name: proxy-network
